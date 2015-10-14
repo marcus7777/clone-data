@@ -15,7 +15,10 @@
       for (var i = 0; i < from.length; i++) {
         to.push(from[i])
       }
-      return to
+      
+      if (to.length > 0) {
+        return to
+      }
     }
   });
 </script>
