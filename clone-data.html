@@ -1,19 +1,19 @@
 <script>
   /**
    * `<clone-data from="{{data}}" to="{{copy}}"></clone-data>` [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
-   *  clones data `from` to `to` Just arrays at mo
+   *  clones data `from` to `to` Just arrays at moment
    */
   Polymer({
     is: "clone-data",
     properties: {
-      to: {computed:"getTo(from)"}
+      to: {computed:"_getTo(from)"}
     },
-    getTo: function(from) {
+    _getTo: function(from) {
       to = []
       for (var i = 0; i < from.length; i++) {
         to.push(from[i])
       }
-      return to;
+      return to
     }
   });
 </script>
