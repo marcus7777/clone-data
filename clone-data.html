@@ -7,7 +7,7 @@
   Polymer({
     is: "clone-data",
     properties: {
-      to: {computed:"_getTo(from)"}
+      to: {computed: "_getTo(from)", notify:true}
     },
     _getTo: function(from) {
       to = []
