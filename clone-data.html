@@ -1,6 +1,6 @@
 <script>
   /**
-   * `<clone-data>` [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
+   * `<clone-data from="{{data}}" to="{{copy}}"></clone-data>` [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
    *  clones data `from` to `to` Just arrays at mo
    */
   Polymer({
@@ -8,7 +8,7 @@
     properties: {
       to: {computed:"getTo(from)"}
     },
-    getTo function(from) {
+    getTo: function(from) {
       to = []
       for (var i = 0; i < from.length; i++) {
         to.push(from[i])
