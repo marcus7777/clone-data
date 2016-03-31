@@ -11,6 +11,7 @@
       fromArray: Array,
       toObject: {computed: "_getToObject(fromObject)", notify:true, type: Object},
       fromObject: Object
+      to: {computed: "_getToObject(from)", notify:true}
     },
     _getToArray: function(from) {
       to = []
