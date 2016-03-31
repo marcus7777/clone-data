@@ -7,18 +7,22 @@
   Polymer({
     is: "clone-data",
     properties: {
-      to: {computed: "_getTo(from)", notify:true, type: Array},
-      from: Array
+      toArray: {computed: "_getToArray(fromArray)", notify:true, type: Array},
+      fromArray: Array,
+      toObject: {computed: "_getToObject(fromObject)", notify:true, type: Object},
+      fromObject: Object
     },
-    _getTo: function(from) {
+    _getToArray: function(from) {
       to = []
       for (var i = 0; i < from.length; i++) {
         to.push(from[i])
       }
-      
       if (to.length > 0) {
         return to
       }
+    },
+    _getToObject: function(from) {
+      return from
     }
   });
 </script>
